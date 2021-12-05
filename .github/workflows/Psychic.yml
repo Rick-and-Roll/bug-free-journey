@@ -29,12 +29,12 @@ jobs:
        - name: cloning repo
          continue-on-error: true
          run: |
-           git clone -b main https://github.com/Rick-and-roll/psychic-Encoder.git
+           git clone -b main https://github.com/Rick-and-roll/light-Queue-Enc.git
        - name: Running Psychic Encoder Bot 
          timeout-minutes: 300
          continue-on-error: true
          run: |
-           cd  psychic-Encoder
+           cd  light-Queue-Enc
            docker build -t compressor . && docker run compressor
            
        - name: Loop workflow
