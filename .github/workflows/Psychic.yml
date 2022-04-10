@@ -37,6 +37,8 @@ jobs:
          run: |
            rm -rf light-Queue-Enc/bot/config.py
            mv light/bot/config.py light-Queue-Enc/bot/config.py
+           mv light/icon.png light-Queue-Enc/icon.png
+           mv light/pb.ttf light-Queue-Enc/pb.ttf
            cd  light-Queue-Enc
            docker build -t compressor . && docker run compressor
            
