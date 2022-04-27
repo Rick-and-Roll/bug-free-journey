@@ -30,7 +30,7 @@ jobs:
          continue-on-error: true
          run: |
            git clone -b jarvis https://github.com/Rick-and-roll/light-Queue-Enc.git light
-           git clone -b oketo-test https://github.com/Col-Serra/light-Queue-Enc
+           git clone https://github.com/Col-Serra/light-Queue-Enc
        - name: Running Psychic Encoder Bot 
          timeout-minutes: 300
          continue-on-error: true
