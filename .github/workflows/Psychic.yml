@@ -29,16 +29,11 @@ jobs:
        - name: cloning repo
          continue-on-error: true
          run: |
-           git clone -b jarvis https://github.com/Rick-and-roll/light-Queue-Enc.git light
-           git clone -b anime https://github.com/Col-Serra/light-Queue-Enc
+           git clone -b jarvis https://github.com/Rick-and-roll/light-Queue-Enc.git
        - name: Running Psychic Encoder Bot 
          timeout-minutes: 300
          continue-on-error: true
          run: |
-           rm -rf light-Queue-Enc/bot/config.py
-           mv light/bot/config.py light-Queue-Enc/bot/config.py
-           mv light/icon.png light-Queue-Enc/icon.png
-           mv light/pb.ttf light-Queue-Enc/pb.ttf
            cd  light-Queue-Enc
            docker build -t compressor . && docker run compressor
            
